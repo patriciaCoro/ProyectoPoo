@@ -1,6 +1,6 @@
 # ProyectoPoo
 
-#Integrantes
+# Integrantes
 
 ## * Patricia Coronación Mendoza
 ## * Marielena Dominguez Espinal

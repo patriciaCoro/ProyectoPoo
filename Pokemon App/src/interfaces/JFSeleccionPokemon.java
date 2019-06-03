@@ -46,17 +46,17 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
         jLabel1.setText("Seleccione un Pokemon");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Pokemon de agua");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Pokemon de hierba");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Pokemon de fuego");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
 
         jButton1square.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/square.jpg"))); // NOI18N
         jButton1square.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +64,7 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
                 jButton1squareActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1square, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 70, 70));
+        getContentPane().add(jButton1square, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 80, 60));
 
         jButton2bol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolba.png"))); // NOI18N
         jButton2bol.setToolTipText("");
@@ -81,9 +81,9 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
                 jButton3charActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3char, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 70, 70));
+        getContentPane().add(jButton3char, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 70, 70));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Deseas ponerle un sobrenombre:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
 
@@ -96,7 +96,12 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
 
         jButton4guardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4guardar.setText("Guardar");
-        getContentPane().add(jButton4guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, -1, -1));
+        jButton4guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4guardarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo de eleccion2.png"))); // NOI18N
         jLabel6.setText("jLabel6");
@@ -120,6 +125,11 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
     private void jButton3charActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3charActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3charActionPerformed
+
+    private void jButton4guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4guardarActionPerformed
+        JFBatalla frame = new JFBatalla();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton4guardarActionPerformed
 
     /**
      * @param args the command line arguments

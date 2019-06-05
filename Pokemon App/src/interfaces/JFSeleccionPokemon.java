@@ -16,6 +16,7 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
      */
     public JFSeleccionPokemon() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -34,9 +35,6 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
         jButton1square = new javax.swing.JButton();
         jButton2bol = new javax.swing.JButton();
         jButton3char = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton4guardar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,26 +81,6 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3char, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 70, 70));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Deseas ponerle un sobrenombre:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 232, -1));
-
-        jButton4guardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4guardar.setText("Guardar");
-        jButton4guardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4guardarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, -1, -1));
-
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo de eleccion2.png"))); // NOI18N
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 470));
@@ -110,26 +88,23 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton2bolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2bolActionPerformed
-        // TODO add your handling code here:
+        JFSobrenombre frame = new JFSobrenombre();
+        frame.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2bolActionPerformed
 
     private void jButton1squareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1squareActionPerformed
-        // TODO add your handling code here:
+        JFSobrenombre frame = new JFSobrenombre();
+        frame.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1squareActionPerformed
 
     private void jButton3charActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3charActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3charActionPerformed
-
-    private void jButton4guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4guardarActionPerformed
-        JFBatalla frame = new JFBatalla();
+        JFSobrenombre frame = new JFSobrenombre();
         frame.setVisible(true);
-    }//GEN-LAST:event_jButton4guardarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton3charActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,13 +145,10 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
     private javax.swing.JButton jButton1square;
     private javax.swing.JButton jButton2bol;
     private javax.swing.JButton jButton3char;
-    private javax.swing.JButton jButton4guardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

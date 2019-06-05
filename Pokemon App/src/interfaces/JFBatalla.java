@@ -16,6 +16,7 @@ public class JFBatalla extends javax.swing.JFrame {
      */
     public JFBatalla() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -150,6 +151,7 @@ public class JFBatalla extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JFBatalla().setVisible(true);
+                
             }
         });
     }

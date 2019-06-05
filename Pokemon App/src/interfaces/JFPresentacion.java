@@ -5,6 +5,8 @@
  */
 package interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alumno
@@ -16,6 +18,7 @@ public class JFPresentacion extends javax.swing.JFrame {
      */
     public JFPresentacion() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -98,8 +101,21 @@ public class JFPresentacion extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JFSeleccionPokemon frame = new JFSeleccionPokemon();
-        frame.setVisible(true);
+                       
+        if (jTextField1.getText().length() == 0 ){
+            JOptionPane.showMessageDialog(null, "Debe asignarle un nombre");
+            
+        }
+        
+        else{
+            JFSeleccionPokemon frame = new JFSeleccionPokemon();
+            frame.setVisible(true);
+            
+            dispose();
+            
+        }
+                   
+                        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

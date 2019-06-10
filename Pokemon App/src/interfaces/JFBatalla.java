@@ -16,6 +16,7 @@ public class JFBatalla extends javax.swing.JFrame {
     /**
      * Creates new form JFPresentacion
      */
+    //
     public JFBatalla() {
         initComponents();
         setLocationRelativeTo(null);

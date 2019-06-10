@@ -13,9 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class JFPresentacion extends javax.swing.JFrame {
 
-    /**
-     * Creates new form JFBatalla
-     */
+    public static String nombre = "";
+    
     public JFPresentacion() {
         initComponents();
         setLocationRelativeTo(null);
@@ -74,6 +73,11 @@ public class JFPresentacion extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -108,6 +112,7 @@ public class JFPresentacion extends javax.swing.JFrame {
         }
         
         else{
+            nombre= jTextField1.getText();
             JFSeleccionPokemon frame = new JFSeleccionPokemon();
             frame.setVisible(true);
             
@@ -117,6 +122,10 @@ public class JFPresentacion extends javax.swing.JFrame {
                    
                         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments

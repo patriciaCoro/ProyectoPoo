@@ -10,6 +10,8 @@ package interfaces;
  * @author alumno
  */
 public class JFBatalla extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form JFPresentacion
@@ -17,7 +19,11 @@ public class JFBatalla extends javax.swing.JFrame {
     public JFBatalla() {
         initComponents();
         setLocationRelativeTo(null);
+        
+        jLabel5.setText(JFPresentacion.nombre);
     }
+    
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -64,8 +70,8 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel4.setText("Severous Ouk ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, -1));
 
-        jLabel5.setText("Entrenador 2");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 460, -1, -1));
+        jLabel5.setText("vgfr");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 480, 140, 30));
 
         jLabel6.setText("Pokemon 2// *** HP");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));

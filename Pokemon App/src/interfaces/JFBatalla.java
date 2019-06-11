@@ -18,6 +18,8 @@ public class JFBatalla extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         jLabel5.setText(JFPresentacion.nombre);
+        
+        jLabel13.setText(JFSobrenombre.apodo);
     }
     
   
@@ -47,6 +49,8 @@ public class JFBatalla extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,9 +68,11 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrena1.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Severous Ouk ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 480, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("vgfr");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 480, 140, 30));
 
@@ -109,10 +115,18 @@ public class JFBatalla extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 490, 170));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolbii.png"))); // NOI18N
-        jLabel12.setText("f");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 140));
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel13.setText("aaaaa");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 80, 30));
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel14.setText("sssss");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, -1));
+
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/estadio3.jpg"))); // NOI18N
+        jLabel11.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 620));
 
         pack();
@@ -167,6 +181,8 @@ public class JFBatalla extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

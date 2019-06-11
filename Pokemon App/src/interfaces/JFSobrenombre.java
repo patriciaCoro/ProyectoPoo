@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  * @author alumno
  */
 public class JFSobrenombre extends javax.swing.JFrame {
+    
+    public static String apodo ="";
 
     /**
      * Creates new form JFSobrenombre
@@ -92,7 +94,11 @@ public class JFSobrenombre extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Si no desea agregarle un sobrenombre, presione omitir");    
         }
         else{
+            apodo = JTextFieldSobrenombre.getText();
+            JFBatalla frame = new JFBatalla();
+            frame.setVisible(true);
             
+            dispose();
         }
         
     }//GEN-LAST:event_jButton1GuardarActionPerformed

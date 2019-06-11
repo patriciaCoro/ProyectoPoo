@@ -10,5 +10,13 @@ package entidades;
  * @author alumno
  */
 public class Entrenador {
+    String nombre;
+    String genero;
+    Pokemon pokemon;
+    Entrenador(String nombre){
+        this.nombre = nombre;
+        
+    }
+    
     
 }

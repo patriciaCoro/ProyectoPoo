@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 public class JFPresentacion extends javax.swing.JFrame {
 
     public static String nombre = "";
+    public static String genero = "";
     
     public JFPresentacion() {
         initComponents();
@@ -44,7 +45,7 @@ public class JFPresentacion extends javax.swing.JFrame {
         setForeground(java.awt.Color.red);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 255));
         jLabel1.setText("PRESENTACIÓN DEL ENTRENADOR");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 430, 42));
@@ -113,6 +114,7 @@ public class JFPresentacion extends javax.swing.JFrame {
         
         else{
             nombre= jTextField1.getText();
+            genero = jComboBox1.getSelectedItem().toString();
             JFSeleccionPokemon frame = new JFSeleccionPokemon();
             frame.setVisible(true);
             

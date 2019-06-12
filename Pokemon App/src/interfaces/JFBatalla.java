@@ -1,11 +1,13 @@
 
 package interfaces;
+import entidades.*;
 
 /**
  *
  * @author alumno
  */
 public class JFBatalla extends javax.swing.JFrame {
+    
     
     
 
@@ -16,12 +18,24 @@ public class JFBatalla extends javax.swing.JFrame {
     public JFBatalla() {
         initComponents();
         setLocationRelativeTo(null);
-        
+        MostrarImagen();
         jLabel5.setText(JFPresentacion.nombre);
         
         jLabel13.setText(JFSobrenombre.apodo);
         
-        jLabel15.setText(JFPresentacion.genero);
+        
+    }
+    public void MostrarImagen(){
+        if (JFPresentacion.genero == "Femenino" ){
+            jLabel17.setVisible(true);
+            jLabel2.setVisible(false);            
+        }
+        else if ((JFPresentacion.genero == "Masculino" )) {
+            jLabel17.setVisible(false);
+            jLabel2.setVisible(true);
+            
+        }
+        
     }
     
   
@@ -48,8 +62,7 @@ public class JFBatalla extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
@@ -70,7 +83,7 @@ public class JFBatalla extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, 80));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrena1.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 70, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Severous Ouk ");
@@ -112,12 +125,8 @@ public class JFBatalla extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel16.setText("Género:");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 520, -1, -1));
-
-        jLabel15.setText("jLabel15");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 530, -1, -1));
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrenadora.png"))); // NOI18N
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 60, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -194,8 +203,7 @@ public class JFBatalla extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

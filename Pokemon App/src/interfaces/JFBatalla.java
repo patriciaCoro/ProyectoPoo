@@ -19,6 +19,7 @@ public class JFBatalla extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         MostrarImagen();
+        MostrarPokemon();
         jLabel5.setText(JFPresentacion.nombre);
         
         jLabel13.setText(JFSobrenombre.apodo);
@@ -36,6 +37,34 @@ public class JFBatalla extends javax.swing.JFrame {
             
         }
         
+    }
+    public void MostrarPokemon(){
+        if(JFSeleccionPokemon.pokemonPulsado == "a"){
+            jLabelS1.setVisible(true);
+            jLabelC1.setVisible(false);
+            jLabelB1.setVisible(false);
+            jLabelS2.setVisible(false);
+            jLabelC2.setVisible(false);
+            jLabelB2.setVisible(true);
+            
+        }
+        else if(JFSeleccionPokemon.pokemonPulsado == "b"){
+            jLabelS1.setVisible(false);
+            jLabelC1.setVisible(true);
+            jLabelB1.setVisible(false);
+            jLabelS2.setVisible(true);
+            jLabelC2.setVisible(false);
+            jLabelB2.setVisible(false);
+            
+        }
+        else if (JFSeleccionPokemon.pokemonPulsado == "c"){
+            jLabelS1.setVisible(true);
+            jLabelC1.setVisible(false);
+            jLabelB1.setVisible(false);
+            jLabelS2.setVisible(false);
+            jLabelC2.setVisible(true);
+            jLabelB2.setVisible(false);
+        }
     }
     
   
@@ -56,16 +85,20 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        jLabelS2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
+        jLabelS1 = new javax.swing.JLabel();
+        jLabelB1 = new javax.swing.JLabel();
+        jLabelC2 = new javax.swing.JLabel();
+        jLabelC1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel12 = new javax.swing.JLabel();
+        jLabelB2 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -99,8 +132,8 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel7.setText("Pokemon 1// *** HP");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 160, 150));
+        jLabelS2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
+        getContentPane().add(jLabelS2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, 160, 150));
 
         jLabel8.setText("NIVEL X");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, -1, -1));
@@ -128,21 +161,33 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrenadora.png"))); // NOI18N
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 60, -1, -1));
 
+        jLabelS1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
+        getContentPane().add(jLabelS1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 160, 150));
+
+        jLabelB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolbii.png"))); // NOI18N
+        getContentPane().add(jLabelB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 160, 140));
+
+        jLabelC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/char2.png"))); // NOI18N
+        getContentPane().add(jLabelC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, -1, -1));
+
+        jLabelC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/char2.png"))); // NOI18N
+        getContentPane().add(jLabelC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, -1, -1));
+
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 490, 170));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolbii.png"))); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 140));
+        jLabelB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolbii.png"))); // NOI18N
+        getContentPane().add(jLabelB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 140));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("aaaaa");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 80, 30));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel14.setText("sssss");
+        jLabel14.setText("Squirtle");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/estadio3.jpg"))); // NOI18N
@@ -198,9 +243,7 @@ public class JFBatalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel17;
@@ -212,6 +255,12 @@ public class JFBatalla extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelB1;
+    private javax.swing.JLabel jLabelB2;
+    private javax.swing.JLabel jLabelC1;
+    private javax.swing.JLabel jLabelC2;
+    private javax.swing.JLabel jLabelS1;
+    private javax.swing.JLabel jLabelS2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

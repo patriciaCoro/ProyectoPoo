@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 public class JFSobrenombre extends javax.swing.JFrame {
     
     public static String apodo ="";
+    
 
     /**
      * Creates new form JFSobrenombre
@@ -104,6 +105,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1GuardarActionPerformed
 
     private void jButton2OmitirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2OmitirActionPerformed
+        
         JFBatalla frame = new JFBatalla();
         frame.setVisible(true);
         dispose();

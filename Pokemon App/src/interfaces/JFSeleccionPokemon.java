@@ -10,6 +10,7 @@ package interfaces;
  * @author alumno
  */
 public class JFSeleccionPokemon extends javax.swing.JFrame {
+    public static String pokemonPulsado;
 
     /**
      * Creates new form JFSeleccionPokemon
@@ -29,9 +30,9 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Squirtle = new javax.swing.JLabel();
+        Bolbausor = new javax.swing.JLabel();
+        Charmander = new javax.swing.JLabel();
         jButton1square = new javax.swing.JButton();
         jButton2bol = new javax.swing.JButton();
         jButton3char = new javax.swing.JButton();
@@ -44,17 +45,17 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
         jLabel1.setText("Seleccione un Pokemon");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("Pokemon de agua");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, -1));
+        Squirtle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Squirtle.setText("Squirtle");
+        getContentPane().add(Squirtle, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Pokemon de hierba");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
+        Bolbausor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Bolbausor.setText("Bolbausor");
+        getContentPane().add(Bolbausor, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setText("Pokemon de fuego");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
+        Charmander.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Charmander.setText("Charmander");
+        getContentPane().add(Charmander, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
 
         jButton1square.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/square.jpg"))); // NOI18N
         jButton1square.addActionListener(new java.awt.event.ActionListener() {
@@ -90,6 +91,7 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
 
     private void jButton2bolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2bolActionPerformed
         JFSobrenombre frame = new JFSobrenombre();
+        pokemonPulsado = "a";
         frame.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton2bolActionPerformed
@@ -97,12 +99,14 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
     private void jButton1squareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1squareActionPerformed
         JFSobrenombre frame = new JFSobrenombre();
         frame.setVisible(true);
+        pokemonPulsado = "b";
         dispose();
     }//GEN-LAST:event_jButton1squareActionPerformed
 
     private void jButton3charActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3charActionPerformed
         JFSobrenombre frame = new JFSobrenombre();
         frame.setVisible(true);
+        pokemonPulsado = "c";
         dispose();
     }//GEN-LAST:event_jButton3charActionPerformed
 
@@ -142,13 +146,13 @@ public class JFSeleccionPokemon extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1square;
-    private javax.swing.JButton jButton2bol;
-    private javax.swing.JButton jButton3char;
+    private javax.swing.JLabel Bolbausor;
+    private javax.swing.JLabel Charmander;
+    private javax.swing.JLabel Squirtle;
+    public static javax.swing.JButton jButton1square;
+    public static javax.swing.JButton jButton2bol;
+    public static javax.swing.JButton jButton3char;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

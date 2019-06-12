@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 public class JFSobrenombre extends javax.swing.JFrame {
     
     public static String apodo ="";
+    public static String botonSelec = "";
     
 
     /**
@@ -98,6 +99,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
             apodo = JTextFieldSobrenombre.getText();
             JFBatalla frame = new JFBatalla();
             frame.setVisible(true);
+            botonSelec = "si";
             
             dispose();
         }
@@ -108,6 +110,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
         
         JFBatalla frame = new JFBatalla();
         frame.setVisible(true);
+        botonSelec = "no";
         dispose();
     }//GEN-LAST:event_jButton2OmitirActionPerformed
 

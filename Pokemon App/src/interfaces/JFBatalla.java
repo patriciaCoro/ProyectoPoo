@@ -20,6 +20,7 @@ public class JFBatalla extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         MostrarImagen();
         MostrarPokemon();
+        
         jLabel5.setText(JFPresentacion.nombre);
         
         jLabel13.setText(JFSobrenombre.apodo);
@@ -65,8 +66,10 @@ public class JFBatalla extends javax.swing.JFrame {
             jLabelC2.setVisible(true);
             jLabelB2.setVisible(false);
         }
+        
     }
     
+   
   
 
     /**

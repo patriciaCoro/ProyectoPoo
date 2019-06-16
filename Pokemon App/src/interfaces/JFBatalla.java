@@ -7,8 +7,9 @@ import entidades.*;
  * @author alumno
  */
 public class JFBatalla extends javax.swing.JFrame {
-    
-    
+    Pokemon miPokemon = new Pokemon("Pokemon 1");
+    Pokemon rival = new Pokemon("Pokemon 2");
+       
     
 
     /**
@@ -22,9 +23,11 @@ public class JFBatalla extends javax.swing.JFrame {
         MostrarPokemon();
         MostrarNombre();
         jLabel5.setText(JFPresentacion.nombre);
-        
-        //jLabel13.setText(JFSobrenombre.apodo);
-        
+        jLabelMiPo.setText(miPokemon.MostrarEstado());
+        jLabelMiCo.setText(rival.MostrarEstado());
+        jLabel9.setText(miPokemon.MostrarNivel());
+        jLabel8.setText(rival.MostrarNivel());
+                
         
     }
     public void MostrarImagen(){
@@ -113,14 +116,14 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLabelMiPo = new javax.swing.JLabel();
+        jLabelMiCo = new javax.swing.JLabel();
         jLabelS2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonAtacar = new javax.swing.JButton();
+        jButtonRendi = new javax.swing.JButton();
+        jButtonPocion = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jLabelS1 = new javax.swing.JLabel();
         jLabelB1 = new javax.swing.JLabel();
@@ -150,13 +153,13 @@ public class JFBatalla extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("vgfr");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 480, 140, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, 220, 30));
 
-        jLabel6.setText("Pokemon 2// *** HP");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));
+        jLabelMiPo.setText("Pokemon 2// *** HP");
+        getContentPane().add(jLabelMiPo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));
 
-        jLabel7.setText("Pokemon 1// *** HP");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, -1));
+        jLabelMiCo.setText("Pokemon 1// *** HP");
+        getContentPane().add(jLabelMiCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, -1));
 
         jLabelS2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
         getContentPane().add(jLabelS2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 150));
@@ -167,22 +170,27 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel9.setText("NIVEL X");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Atacar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, -1, -1));
-
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("Rendirse");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
-
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setText("Usar poción");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAtacar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonAtacar.setText("Atacar");
+        jButtonAtacar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonAtacarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, -1, -1));
+        getContentPane().add(jButtonAtacar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, -1, -1));
+
+        jButtonRendi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonRendi.setText("Rendirse");
+        getContentPane().add(jButtonRendi, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
+
+        jButtonPocion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonPocion.setText("Usar poción");
+        jButtonPocion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPocionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonPocion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, -1, -1));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrenadora.png"))); // NOI18N
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(869, 60, 210, -1));
@@ -225,10 +233,52 @@ public class JFBatalla extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    void AnalizarSituacion() {
+        if (miPokemon.vida == 0) {
+            jTextArea1.append(miPokemon.nombre 
+                    + " Ya no puede continuar. "
+                    + rival.nombre + " gana.");
+            
+            jButtonAtacar.setEnabled(false);
+            jButtonRendi.setEnabled(false);
+            jButtonPocion.setEnabled(false);
+        }
+        
+        if (rival.vida == 0) {
+            jTextArea1.append(rival.nombre 
+                    + " Ya no puede continuar. "
+                    + miPokemon.nombre + " gana.");
+            
+            jButtonAtacar.setEnabled(false);
+            jButtonRendi.setEnabled(false);
+            jButtonPocion.setEnabled(false);
+        }
+    }
+    private void jButtonPocionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPocionActionPerformed
+        String resultado3 = miPokemon.Pocion(miPokemon);
+        jTextArea1.append(resultado3 + "\n");
+        
+        String resultado2 = rival.AtacarVentaja(miPokemon);
+        jTextArea1.append(resultado2 + "\n");
+        
+        jLabelMiPo.setText(miPokemon.MostrarEstado());
+        jLabelMiCo.setText(rival.MostrarEstado());
+        
+        AnalizarSituacion();
+    }//GEN-LAST:event_jButtonPocionActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jButtonAtacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtacarActionPerformed
+        String resultado = miPokemon.Atacar(rival);       
+        jTextArea1.append(resultado + "\n");
+
+        String resultado2 = rival.AtacarVentaja(miPokemon);
+        jTextArea1.append(resultado2 + "\n");
+        
+        jLabelMiPo.setText(miPokemon.MostrarEstado());
+        jLabelMiCo.setText(rival.MostrarEstado());
+        
+        AnalizarSituacion();
+    }//GEN-LAST:event_jButtonAtacarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,9 +318,9 @@ public class JFBatalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonAtacar;
+    private javax.swing.JButton jButtonPocion;
+    private javax.swing.JButton jButtonRendi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -280,14 +330,14 @@ public class JFBatalla extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelB1;
     private javax.swing.JLabel jLabelB2;
     private javax.swing.JLabel jLabelC1;
     private javax.swing.JLabel jLabelC2;
+    private javax.swing.JLabel jLabelMiCo;
+    private javax.swing.JLabel jLabelMiPo;
     private javax.swing.JLabel jLabelS1;
     private javax.swing.JLabel jLabelS2;
     private javax.swing.JScrollPane jScrollPane1;

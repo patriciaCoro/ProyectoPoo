@@ -110,7 +110,6 @@ public class JFBatalla extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -127,6 +126,7 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabelB1 = new javax.swing.JLabel();
         jLabelC2 = new javax.swing.JLabel();
         jLabelC1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabelB2 = new javax.swing.JLabel();
@@ -139,46 +139,41 @@ public class JFBatalla extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entre.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 207, 414));
-
-        jLabel3.setFont(new java.awt.Font("Yu Gothic Medium", 1, 48)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("BATALLA POKEMON");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, 80));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 207, 414));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrena1.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 70, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Severous Ouk ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 480, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 480, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("vgfr");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 480, 140, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 480, 140, 30));
 
         jLabel6.setText("Pokemon 2// *** HP");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));
 
         jLabel7.setText("Pokemon 1// *** HP");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, -1));
 
         jLabelS2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
-        getContentPane().add(jLabelS2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, 160, 150));
+        getContentPane().add(jLabelS2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 150));
 
         jLabel8.setText("NIVEL X");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, -1, -1));
 
         jLabel9.setText("NIVEL X");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 350, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Atacar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("Rendirse");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("Usar poción");
@@ -187,39 +182,42 @@ public class JFBatalla extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, -1, -1));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrenadora.png"))); // NOI18N
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 60, -1, -1));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(869, 60, 210, -1));
 
         jLabelS1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
-        getContentPane().add(jLabelS1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 160, 150));
+        getContentPane().add(jLabelS1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 160, 150));
 
         jLabelB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolbii.png"))); // NOI18N
-        getContentPane().add(jLabelB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 160, 140));
+        getContentPane().add(jLabelB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 160, 140));
 
         jLabelC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/char2.png"))); // NOI18N
-        getContentPane().add(jLabelC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, -1, -1));
+        getContentPane().add(jLabelC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, -1, -1));
 
         jLabelC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/char2.png"))); // NOI18N
-        getContentPane().add(jLabelC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, -1, -1));
+        getContentPane().add(jLabelC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/jiji2.jpg"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 600, 130));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 490, 170));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 490, 170));
 
         jLabelB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolbii.png"))); // NOI18N
         getContentPane().add(jLabelB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 140));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("aaaaa");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 120, 30));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 120, 30));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setText("Squirtle");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/estadio3.jpg"))); // NOI18N
         jLabel11.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -274,12 +272,12 @@ public class JFBatalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

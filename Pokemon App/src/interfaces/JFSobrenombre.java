@@ -71,6 +71,11 @@ public class JFSobrenombre extends javax.swing.JFrame {
                 JTextFieldSobrenombreActionPerformed(evt);
             }
         });
+        JTextFieldSobrenombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                JTextFieldSobrenombreKeyTyped(evt);
+            }
+        });
         getContentPane().add(JTextFieldSobrenombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 146, 160, -1));
 
         jButton2Omitir.setText("Omitir");
@@ -114,6 +119,12 @@ public class JFSobrenombre extends javax.swing.JFrame {
         botonSelec = "no";
         dispose();
     }//GEN-LAST:event_jButton2OmitirActionPerformed
+
+    private void JTextFieldSobrenombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextFieldSobrenombreKeyTyped
+        // TODO add your handling code here:
+        if (JTextFieldSobrenombre.getText().length()==11)
+            evt.consume();
+    }//GEN-LAST:event_JTextFieldSobrenombreKeyTyped
 
     /**
      * @param args the command line arguments

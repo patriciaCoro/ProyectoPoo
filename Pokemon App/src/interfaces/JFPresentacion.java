@@ -64,6 +64,11 @@ public class JFPresentacion extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 203, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -131,6 +136,11 @@ public class JFPresentacion extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        if (jTextField1.getText().length()==11)
+            evt.consume();
+    }//GEN-LAST:event_jTextField1KeyTyped
 
     /**
      * @param args the command line arguments

@@ -20,10 +20,10 @@ public class JFBatalla extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         MostrarImagen();
         MostrarPokemon();
-        
+        MostrarNombre();
         jLabel5.setText(JFPresentacion.nombre);
         
-        jLabel13.setText(JFSobrenombre.apodo);
+        //jLabel13.setText(JFSobrenombre.apodo);
         
         
     }
@@ -41,8 +41,8 @@ public class JFBatalla extends javax.swing.JFrame {
     }
     public void MostrarPokemon(){
         if(JFSeleccionPokemon.pokemonPulsado == "a"){
-            jLabelS1.setVisible(true);
-            jLabelC1.setVisible(false);
+            jLabelS1.setVisible(false);
+            jLabelC1.setVisible(true);
             jLabelB1.setVisible(false);
             jLabelS2.setVisible(false);
             jLabelC2.setVisible(false);
@@ -51,8 +51,8 @@ public class JFBatalla extends javax.swing.JFrame {
         }
         else if(JFSeleccionPokemon.pokemonPulsado == "b"){
             jLabelS1.setVisible(false);
-            jLabelC1.setVisible(true);
-            jLabelB1.setVisible(false);
+            jLabelC1.setVisible(false);
+            jLabelB1.setVisible(true);
             jLabelS2.setVisible(true);
             jLabelC2.setVisible(false);
             jLabelB2.setVisible(false);
@@ -68,7 +68,35 @@ public class JFBatalla extends javax.swing.JFrame {
         }
         
     }
-    
+    public void MostrarNombre(){
+        if (JFSeleccionPokemon.pokemonPulsado == "a" & JFSobrenombre.opcionPulsada == "g"){
+            jLabel13.setText(JFSobrenombre.apodo);
+            
+            
+        }
+        else if (JFSeleccionPokemon.pokemonPulsado == "a" & JFSobrenombre.opcionPulsada == "o"){
+            jLabel13.setText("Bolbasour");
+            jLabel14.setText("Charmander");
+           
+        }
+        else if (JFSeleccionPokemon.pokemonPulsado == "b" & JFSobrenombre.opcionPulsada == "g"){
+            jLabel13.setText(JFSobrenombre.apodo);
+            jLabel14.setText("Bolbasour");
+        }
+        else if (JFSeleccionPokemon.pokemonPulsado == "b" & JFSobrenombre.opcionPulsada == "o"){
+            jLabel13.setText("Squirtle");
+            jLabel14.setText("Bolbasour");
+            
+        }
+        else if (JFSeleccionPokemon.pokemonPulsado == "c" & JFSobrenombre.opcionPulsada == "g"){
+            jLabel13.setText(JFSobrenombre.apodo);
+            jLabel14.setText("Squirtle");
+        }
+        else if (JFSeleccionPokemon.pokemonPulsado == "c" & JFSobrenombre.opcionPulsada == "o"){
+            jLabel13.setText("Charmander");
+            jLabel14.setText("Squirtle");
+        }
+    }
    
   
 
@@ -187,7 +215,7 @@ public class JFBatalla extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("aaaaa");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 80, 30));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 120, 30));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setText("Squirtle");

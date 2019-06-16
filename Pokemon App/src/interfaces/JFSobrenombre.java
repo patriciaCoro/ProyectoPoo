@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author alumno
  */
 public class JFSobrenombre extends javax.swing.JFrame {
-    
+    public static String opcionPulsada = "";
     public static String apodo ="";
     public static String botonSelec = "";
     
@@ -92,6 +92,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextFieldSobrenombreActionPerformed
 
     private void jButton1GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1GuardarActionPerformed
+        opcionPulsada = "g";
         if ( JTextFieldSobrenombre.getText(). length()== 0){
             JOptionPane.showMessageDialog(null,"Si no desea agregarle un sobrenombre, presione omitir");    
         }
@@ -107,7 +108,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1GuardarActionPerformed
 
     private void jButton2OmitirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2OmitirActionPerformed
-        
+        opcionPulsada = "o";
         JFBatalla frame = new JFBatalla();
         frame.setVisible(true);
         botonSelec = "no";

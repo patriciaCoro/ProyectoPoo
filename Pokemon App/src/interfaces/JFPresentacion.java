@@ -73,13 +73,13 @@ public class JFPresentacion extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/profesor oak.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione sexo", "Femenino", "Masculino" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, -1, -1));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Registrar");
@@ -107,11 +107,14 @@ public class JFPresentacion extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                        
-        if (jTextField1.getText().length() == 0 ){
+        if (jTextField1.getText().length() == 0  ){
             JOptionPane.showMessageDialog(null, "Debe asignarle un nombre");
             
         }
-        
+        else if (jComboBox1.getSelectedIndex()==0){
+            JOptionPane.showMessageDialog(null, "Debe asignarle un género");
+            
+        }
         else{
             nombre= jTextField1.getText();
             genero = jComboBox1.getSelectedItem().toString();

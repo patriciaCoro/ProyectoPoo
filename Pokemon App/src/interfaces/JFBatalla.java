@@ -181,6 +181,11 @@ public class JFBatalla extends javax.swing.JFrame {
 
         jButtonRendi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonRendi.setText("Rendirse");
+        jButtonRendi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRendiActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonRendi, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
 
         jButtonPocion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -279,6 +284,10 @@ public class JFBatalla extends javax.swing.JFrame {
         
         AnalizarSituacion();
     }//GEN-LAST:event_jButtonAtacarActionPerformed
+
+    private void jButtonRendiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRendiActionPerformed
+        String resultado4 = miPokemon.Rendirse(miPokemon);
+    }//GEN-LAST:event_jButtonRendiActionPerformed
 
     /**
      * @param args the command line arguments

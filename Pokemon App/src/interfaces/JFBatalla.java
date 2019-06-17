@@ -9,7 +9,8 @@ import entidades.*;
 public class JFBatalla extends javax.swing.JFrame {
     Pokemon miPokemon = new Pokemon("Pokemon 1");
     Pokemon rival = new Pokemon("Pokemon 2");
-       
+    int conOp = 0;
+    int conMp = 0;   
     
 
     /**
@@ -27,7 +28,7 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabelMiCo.setText(rival.MostrarEstado());
         jLabel9.setText(miPokemon.MostrarNivel());
         jLabel8.setText(rival.MostrarNivel());
-                
+        
         
     }
     public void MostrarImagen(){
@@ -72,30 +73,30 @@ public class JFBatalla extends javax.swing.JFrame {
         
     }
     public void MostrarNombre(){
-        if (JFSeleccionPokemon.pokemonPulsado == "a" & JFSobrenombre.opcionPulsada == "g"){
+        if (JFSeleccionPokemon.pokemonPulsado == "a" && JFSobrenombre.opcionPulsada == "g"){
             jLabel13.setText(JFSobrenombre.apodo);
             
             
         }
-        else if (JFSeleccionPokemon.pokemonPulsado == "a" & JFSobrenombre.opcionPulsada == "o"){
+        else if (JFSeleccionPokemon.pokemonPulsado == "a" && JFSobrenombre.opcionPulsada == "o"){
             jLabel13.setText("Bolbasour");
             jLabel14.setText("Charmander");
            
         }
-        else if (JFSeleccionPokemon.pokemonPulsado == "b" & JFSobrenombre.opcionPulsada == "g"){
+        else if (JFSeleccionPokemon.pokemonPulsado == "b" && JFSobrenombre.opcionPulsada == "g"){
             jLabel13.setText(JFSobrenombre.apodo);
             jLabel14.setText("Bolbasour");
         }
-        else if (JFSeleccionPokemon.pokemonPulsado == "b" & JFSobrenombre.opcionPulsada == "o"){
+        else if (JFSeleccionPokemon.pokemonPulsado == "b" && JFSobrenombre.opcionPulsada == "o"){
             jLabel13.setText("Squirtle");
             jLabel14.setText("Bolbasour");
             
         }
-        else if (JFSeleccionPokemon.pokemonPulsado == "c" & JFSobrenombre.opcionPulsada == "g"){
+        else if (JFSeleccionPokemon.pokemonPulsado == "c" && JFSobrenombre.opcionPulsada == "g"){
             jLabel13.setText(JFSobrenombre.apodo);
             jLabel14.setText("Squirtle");
         }
-        else if (JFSeleccionPokemon.pokemonPulsado == "c" & JFSobrenombre.opcionPulsada == "o"){
+        else if (JFSeleccionPokemon.pokemonPulsado == "c" && JFSobrenombre.opcionPulsada == "o"){
             jLabel13.setText("Charmander");
             jLabel14.setText("Squirtle");
         }
@@ -130,6 +131,7 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabelC2 = new javax.swing.JLabel();
         jLabelC1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jButtonExit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabelB2 = new javax.swing.JLabel();
@@ -215,6 +217,14 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/jiji2.jpg"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 600, 130));
 
+        jButtonExit.setText("jButton1");
+        jButtonExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 560, -1, -1));
+
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
@@ -260,24 +270,49 @@ public class JFBatalla extends javax.swing.JFrame {
         }
     }
     private void jButtonPocionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPocionActionPerformed
-        String resultado3 = miPokemon.Pocion(miPokemon);
-        jTextArea1.append(resultado3 + "\n");
-        
-        String resultado2 = rival.AtacarVentaja(miPokemon);
-        jTextArea1.append(resultado2 + "\n");
-        
+        if (conMp ==3){
+            jButtonPocion.setEnabled(false);
+            
+        }
+        else {
+            String resultado3 = miPokemon.Pocion(miPokemon);
+            conMp = conMp +1;
+            jTextArea1.append(resultado3 + "\n");
+            
+            int probAtac = (int)(Math.random()*100);
+            if (probAtac<=25 && conOp <3){
+                String resultado2 = rival.Pocion(rival);
+                conOp = conOp +1;
+                jTextArea1.append(resultado2 + "\n" +"\n");
+            }
+            else {
+                String resultado2 = rival.AtacarVentaja(miPokemon);
+            jTextArea1.append(resultado2 + "\n" + "\n");
+            }
+        }
+                        
         jLabelMiPo.setText(miPokemon.MostrarEstado());
         jLabelMiCo.setText(rival.MostrarEstado());
         
         AnalizarSituacion();
     }//GEN-LAST:event_jButtonPocionActionPerformed
-
+    
     private void jButtonAtacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtacarActionPerformed
         String resultado = miPokemon.Atacar(rival);       
         jTextArea1.append(resultado + "\n");
 
-        String resultado2 = rival.AtacarVentaja(miPokemon);
-        jTextArea1.append(resultado2 + "\n");
+        int probAtac = (int)(Math.random()*100);
+        if (probAtac<=25 && conOp <3){
+            String resultado2 = rival.Pocion(rival);
+            conOp = conOp +1;
+            jTextArea1.append(resultado2 + "\n" +"\n");
+            
+        }
+        else {
+            String resultado2 = rival.AtacarVentaja(miPokemon);
+            jTextArea1.append(resultado2 + "\n" + "\n");
+        }
+        
         
         jLabelMiPo.setText(miPokemon.MostrarEstado());
         jLabelMiCo.setText(rival.MostrarEstado());
@@ -287,7 +322,16 @@ public class JFBatalla extends javax.swing.JFrame {
 
     private void jButtonRendiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRendiActionPerformed
         String resultado4 = miPokemon.Rendirse(miPokemon);
+        jTextArea1.append(resultado4 + "\n" + rival.nombre + ", gana la batalla");
+        
+        jButtonAtacar.setEnabled(false);
+        jButtonRendi.setEnabled(false);
+        jButtonPocion.setEnabled(false);
     }//GEN-LAST:event_jButtonRendiActionPerformed
+
+    private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButtonExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -328,6 +372,7 @@ public class JFBatalla extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAtacar;
+    private javax.swing.JButton jButtonExit;
     private javax.swing.JButton jButtonPocion;
     private javax.swing.JButton jButtonRendi;
     private javax.swing.JLabel jLabel1;

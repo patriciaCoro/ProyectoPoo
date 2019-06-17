@@ -75,7 +75,7 @@ public class JFBatalla extends javax.swing.JFrame {
     public void MostrarNombre(){
         if (JFSeleccionPokemon.pokemonPulsado == "a" && JFSobrenombre.opcionPulsada == "g"){
             jLabel13.setText(JFSobrenombre.apodo);
-            
+            jLabel14.setText("Charmander");
             
         }
         else if (JFSeleccionPokemon.pokemonPulsado == "a" && JFSobrenombre.opcionPulsada == "o"){

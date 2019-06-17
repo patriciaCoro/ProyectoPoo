@@ -103,7 +103,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
         }
         else{
             apodo = JTextFieldSobrenombre.getText();
-            JFBatalla frame = new JFBatalla();
+            JFVersus frame = new JFVersus();
             frame.setVisible(true);
             botonSelec = "si";
             
@@ -114,7 +114,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
 
     private void jButton2OmitirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2OmitirActionPerformed
         opcionPulsada = "o";
-        JFBatalla frame = new JFBatalla();
+        JFVersus frame = new JFVersus();
         frame.setVisible(true);
         botonSelec = "no";
         dispose();

@@ -7,8 +7,8 @@ import entidades.*;
  * @author alumno
  */
 public class JFBatalla extends javax.swing.JFrame {
-    Pokemon miPokemon = new Pokemon("Pokemon 1");
-    Pokemon rival = new Pokemon("Pokemon 2");
+    Pokemon miPokemon = new Pokemon(JFVersus.nomfiP);
+    Pokemon rival = new Pokemon(JFVersus.nomfiR);
     int conOp = 0;
     int conMp = 0;   
     
@@ -155,7 +155,7 @@ public class JFBatalla extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("vgfr");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, 220, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 480, 170, 30));
 
         jLabelMiPo.setText("Pokemon 2// *** HP");
         getContentPane().add(jLabelMiPo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));
@@ -217,13 +217,13 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/jiji2.jpg"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 600, 130));
 
-        jButtonExit.setText("jButton1");
+        jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/exit (1).png"))); // NOI18N
         jButtonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExitActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 560, -1, -1));
+        getContentPane().add(jButtonExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, 60, 60));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -259,7 +259,7 @@ public class JFBatalla extends javax.swing.JFrame {
             jButtonPocion.setEnabled(false);
         }
         
-        if (rival.vida == 0) {
+        else if (rival.vida == 0) {
             jTextArea1.append(rival.nombre 
                     + " Ya no puede continuar. "
                     + miPokemon.nombre + " gana.");

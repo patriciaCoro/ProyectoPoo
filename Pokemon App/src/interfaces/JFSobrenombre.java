@@ -122,7 +122,7 @@ public class JFSobrenombre extends javax.swing.JFrame {
 
     private void JTextFieldSobrenombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextFieldSobrenombreKeyTyped
         // TODO add your handling code here:
-        if (JTextFieldSobrenombre.getText().length()==11)
+        if (JTextFieldSobrenombre.getText().length()==9)
             evt.consume();
     }//GEN-LAST:event_JTextFieldSobrenombreKeyTyped
 

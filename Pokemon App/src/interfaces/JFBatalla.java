@@ -22,13 +22,13 @@ public class JFBatalla extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         MostrarImagen();
         MostrarPokemon();
-        MostrarNombre();
         jLabel5.setText(JFPresentacion.nombre);
         jLabelMiPo.setText(miPokemon.MostrarEstado());
         jLabelMiCo.setText(rival.MostrarEstado());
         jLabel9.setText(miPokemon.MostrarNivel());
         jLabel8.setText(rival.MostrarNivel());
-        
+        jLabel13.setText(JFVersus.nomfiP);
+        jLabel14.setText(JFVersus.nomfiR);
         
     }
     public void MostrarImagen(){
@@ -72,36 +72,7 @@ public class JFBatalla extends javax.swing.JFrame {
         }
         
     }
-    public void MostrarNombre(){
-        if (JFSeleccionPokemon.pokemonPulsado == "a" && JFSobrenombre.opcionPulsada == "g"){
-            jLabel13.setText(JFSobrenombre.apodo);
-            jLabel14.setText("Charmander");
-            
-        }
-        else if (JFSeleccionPokemon.pokemonPulsado == "a" && JFSobrenombre.opcionPulsada == "o"){
-            jLabel13.setText("Bolbasour");
-            jLabel14.setText("Charmander");
-           
-        }
-        else if (JFSeleccionPokemon.pokemonPulsado == "b" && JFSobrenombre.opcionPulsada == "g"){
-            jLabel13.setText(JFSobrenombre.apodo);
-            jLabel14.setText("Bolbasour");
-        }
-        else if (JFSeleccionPokemon.pokemonPulsado == "b" && JFSobrenombre.opcionPulsada == "o"){
-            jLabel13.setText("Squirtle");
-            jLabel14.setText("Bolbasour");
-            
-        }
-        else if (JFSeleccionPokemon.pokemonPulsado == "c" && JFSobrenombre.opcionPulsada == "g"){
-            jLabel13.setText(JFSobrenombre.apodo);
-            jLabel14.setText("Squirtle");
-        }
-        else if (JFSeleccionPokemon.pokemonPulsado == "c" && JFSobrenombre.opcionPulsada == "o"){
-            jLabel13.setText("Charmander");
-            jLabel14.setText("Squirtle");
-        }
-    }
-   
+      
   
 
     /**
@@ -149,28 +120,32 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrena1.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
         jLabel4.setText("Severous Ouk ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 480, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setText("vgfr");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 480, 170, 30));
+        jLabel5.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
+        jLabel5.setText("WWWWWWWWWWW");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 480, 250, 30));
 
+        jLabelMiPo.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
         jLabelMiPo.setText("Pokemon 2// *** HP");
-        getContentPane().add(jLabelMiPo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));
+        getContentPane().add(jLabelMiPo, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, -1, -1));
 
+        jLabelMiCo.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         jLabelMiCo.setText("Pokemon 1// *** HP");
-        getContentPane().add(jLabelMiCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, -1));
+        getContentPane().add(jLabelMiCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
 
         jLabelS2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
         getContentPane().add(jLabelS2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 150));
 
+        jLabel8.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
         jLabel8.setText("NIVEL X");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
         jLabel9.setText("NIVEL X");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 360, -1, -1));
 
         jButtonAtacar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonAtacar.setText("Atacar");
@@ -234,13 +209,13 @@ public class JFBatalla extends javax.swing.JFrame {
         jLabelB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bolbii.png"))); // NOI18N
         getContentPane().add(jLabelB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 140));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel13.setText("aaaaa");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 120, 30));
+        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
+        jLabel13.setText("WWWWWWWWW");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 200, 30));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
         jLabel14.setText("Squirtle");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/estadio3.jpg"))); // NOI18N
         jLabel11.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -264,6 +239,15 @@ public class JFBatalla extends javax.swing.JFrame {
                     + " Ya no puede continuar. "
                     + miPokemon.nombre + " gana.");
             
+            jButtonAtacar.setEnabled(false);
+            jButtonRendi.setEnabled(false);
+            jButtonPocion.setEnabled(false);
+        }
+        
+        else if (rival.vida == 0 && miPokemon.vida == 0){
+            jTextArea1.append(miPokemon.nombre + "y" + rival.nombre
+                    + " Ya no pueden continuar. "
+                    + " Es un empate!");
             jButtonAtacar.setEnabled(false);
             jButtonRendi.setEnabled(false);
             jButtonPocion.setEnabled(false);

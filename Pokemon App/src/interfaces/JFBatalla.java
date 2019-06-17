@@ -118,21 +118,24 @@ public class JFBatalla extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 207, 414));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrena1.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
         jLabel4.setText("Severous Ouk ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("WWWWWWWWWWW");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 480, 250, 30));
 
         jLabelMiPo.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
+        jLabelMiPo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelMiPo.setText("Pokemon 2// *** HP");
         getContentPane().add(jLabelMiPo, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, -1, -1));
 
         jLabelMiCo.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabelMiCo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelMiCo.setText("Pokemon 1// *** HP");
         getContentPane().add(jLabelMiCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
 
@@ -210,10 +213,12 @@ public class JFBatalla extends javax.swing.JFrame {
         getContentPane().add(jLabelB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 160, 140));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("WWWWWWWWW");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 200, 30));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 200, 30));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 20)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Squirtle");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
 

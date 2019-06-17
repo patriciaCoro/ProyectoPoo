@@ -45,24 +45,25 @@ public class JFSobrenombre extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 28)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
         jLabel1.setText("Sobrenombre");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, -1));
 
+        jButton1Guardar.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jButton1Guardar.setText("Guardar");
         jButton1Guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1GuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 233, -1, -1));
+        getContentPane().add(jButton1Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
         jLabel2.setText("Si desea puede cambiar el nombre");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 98, 225, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 225, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("NombrePokemon:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 146, -1, -1));
 
@@ -78,13 +79,14 @@ public class JFSobrenombre extends javax.swing.JFrame {
         });
         getContentPane().add(JTextFieldSobrenombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 146, 160, -1));
 
+        jButton2Omitir.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jButton2Omitir.setText("Omitir");
         jButton2Omitir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2OmitirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2Omitir, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 233, -1, -1));
+        getContentPane().add(jButton2Omitir, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondonombreaaaa.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));

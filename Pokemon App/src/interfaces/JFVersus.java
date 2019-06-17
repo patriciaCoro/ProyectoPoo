@@ -101,14 +101,13 @@ public class JFVersus extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(584, 584));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLChar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/char2.png"))); // NOI18N
-        getContentPane().add(jLChar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, 140));
+        getContentPane().add(jLChar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, -1, 140));
 
         jLChar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/char2.png"))); // NOI18N
-        getContentPane().add(jLChar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        getContentPane().add(jLChar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
         jLSqui2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Squirtle (1).png"))); // NOI18N
         getContentPane().add(jLSqui2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
@@ -133,11 +132,13 @@ public class JFVersus extends javax.swing.JFrame {
 
         jLabelNomPokRiv.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabelNomPokRiv.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNomPokRiv.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelNomPokRiv.setText("jLabel3");
-        getContentPane().add(jLabelNomPokRiv, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
+        getContentPane().add(jLabelNomPokRiv, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
 
         jLabelNomMipok.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabelNomMipok.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNomMipok.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelNomMipok.setText("jLabel2");
         getContentPane().add(jLabelNomMipok, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
 
